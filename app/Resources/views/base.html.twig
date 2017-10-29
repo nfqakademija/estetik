@@ -16,17 +16,25 @@
         {% block header %}
             {% include "::inc/header.html.twig" %}
             <br>
-            <div>
-                <label>
-                    <a href="{{ path('user_registration') }}">Register</a>
-                </label>
-            </div>
-            <br>
-            <div>
-                <label>
-                    <a href="{{ path('login') }}">Login</a>
-                </label>
-            </div>
+            {% if app.user %}
+                <div>
+                    <label>
+                        <a href="{{ path('logout') }}">Logout</a>
+                    </label>
+                </div>
+            {% else %}
+                <div>
+                    <label>
+                        <a href="{{ path('user_registration') }}">Register</a>
+                    </label>
+                </div>
+                <br>
+                <div>
+                    <label>
+                        <a href="{{ path('login') }}">Login</a>
+                    </label>
+                </div>
+            {% endif %}
         {% endblock %}
         {% block body %}{% endblock %}
     {% endblock %}
