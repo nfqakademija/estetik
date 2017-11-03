@@ -18,5 +18,6 @@
 /web/fonts
 /node_modules
 /bin/*
+!/bin/console
 .env
 npm-debug.log
