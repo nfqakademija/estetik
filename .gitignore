@@ -21,3 +21,4 @@
 !/bin/console
 .env
 npm-debug.log
+.idea/workspace.xml
