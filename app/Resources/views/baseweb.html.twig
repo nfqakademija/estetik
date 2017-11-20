@@ -1,1 +1,54 @@
 {% extends "::base.html.twig" %}
+
+{% block header %}
+<div class="page-header">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>Logo</h1>
+        </div>
+        <div class="col-md-2">
+            <h1>Shop</h1>
+        </div>
+        <div class="col-md-2">
+            <h1>Contacts</h1>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+</div>
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3> Logo </h3>
+                </div>
+                <div class="col-md-3">
+                    <h3> Shop </h3>
+                </div>
+                <div class="col-md-3">
+                    <h3> Contacts </h3>
+                </div>
+                <div class="col-md-3">
+                    <h3> About </h3>
+                    <p>
+                        This project includes the Gallery and Creative team eager to arrange a new Ideas' Incubator
+                    </p>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.footer-->
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright © Estetik Project Gallery 2017. All right reserved. </p>
+        </div>
+    </div>
+    <!--/.footer-bottom-->
+</footer>
+{% endblock %}

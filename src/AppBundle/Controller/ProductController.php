@@ -8,11 +8,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class ProductController extends Controller
 {
     /**
-     * @Route("AppBundle:Product:index.html.twig")
+     * @Route("/product", name="product")
      */
     public function indexAction()
     {
-        return $this->render('AppBundle:Product:index.html.twig', array(
+        return $this->render(':Product:index.html.twig', array(
             // ...
         ));
     }
