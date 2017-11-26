@@ -1,0 +1,5 @@
+AppBundle\Entity\Purchase:
+    purchase_{1..100}:
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        state: '<randomElement(["created","fullfilled"])>'
+        user: '@user*'
