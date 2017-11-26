@@ -74,3 +74,8 @@ fos_user:
     from_email:
         address: boost
         sender_name: boost
+
+easy_admin:
+    entities:
+        - AppBundle\Entity\Purchase
+        - AppBundle\Entity\User
