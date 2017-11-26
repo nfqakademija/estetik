@@ -49,6 +49,13 @@ class Purchase
      */
     private $fullfilledAt;
 
+    /**
+     * Many Purchases have One User.
+     * @var User
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="purchases")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    private $user;
 
     /**
      * Get id
@@ -155,5 +162,25 @@ class Purchase
     {
         return $this->fullfilledAt;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param mixed $user
+     * @return Purchase
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+        return $this;
+    }
+
+
 }
 

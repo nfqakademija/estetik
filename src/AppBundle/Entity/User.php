@@ -7,8 +7,8 @@
  */
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Table(name="app_users")
@@ -23,6 +23,36 @@ class User extends \FOS\UserBundle\Model\User
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+
+    /**
+     * One User has Many Purchases.
+     * @ORM\OneToMany(targetEntity="Purchase", mappedBy="user")
+     */
+    private $purchases;
+
+    public function __construct() {
+        parent::__construct();
+        $this->purchases = new ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPurchases()
+    {
+        return $this->purchases;
+    }
+
+    /**
+     * @param mixed $purchases
+     * @return User
+     */
+    public function setPurchases($purchases)
+    {
+        $this->purchases = $purchases;
+        return $this;
+    }
+
 
 
 }
